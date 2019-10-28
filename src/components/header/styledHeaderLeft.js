@@ -9,6 +9,7 @@ export const HeaderLeft = styled.div`
     background-color: ${props => props.theme.secondaryThemeColor};
     min-height: calc(100vh - 3rem);
     width: 3.2rem;
+    user-select: none;
     transition: width .2s;
 
     ${props => props.openBurger && css`
@@ -86,7 +87,6 @@ export const Nav = styled.nav`
 export const NavWrapper = styled.div`
     display: flex;
     align-items: center;
-    user-select: none;
 `;
 
 export const NavElement = styled(Link)`
@@ -95,10 +95,10 @@ export const NavElement = styled(Link)`
     transition: background-color .2s;
     display: flex;
     align-items: center;
-    padding-right: 1rem;
     width: 3.2rem;
 
     ${props => props.show === 'true' && css`
+        padding-right: 1rem;
         width: 8.5rem;`
     }
 
