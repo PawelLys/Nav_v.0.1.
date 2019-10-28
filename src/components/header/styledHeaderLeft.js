@@ -96,6 +96,11 @@ export const NavElement = styled(Link)`
     display: flex;
     align-items: center;
     padding-right: 1rem;
+    width: 3.2rem;
+
+    ${props => props.show === 'true' && css`
+        width: 8.5rem;`
+    }
 
     :hover {
         background-color: ${props => props.show === 'true' && props.theme.thirdaryThemeColor};
