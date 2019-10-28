@@ -75,8 +75,12 @@ export const Burger = styled.div`
 export const Nav = styled.nav`
     color: ${props => props.theme.thirdaryFontColor};
     display: grid;
-    grid-template-columns: 11rem;
+    grid-template-columns: 3.2rem;
     grid-gap: .3rem;
+
+    ${props => props.show && css`
+        grid-template-columns: 11rem;`
+    }
 `;
 
 export const NavWrapper = styled.div`
@@ -101,7 +105,6 @@ export const NavElement = styled(Link)`
 
 export const NavIcons = styled(Icon)`
     font-size: 1.2rem;
-    margin-right: .3rem;
     padding: .5em .8em;
     transition: background-color .2s;
 
@@ -113,6 +116,7 @@ export const NavIcons = styled(Icon)`
 
 export const NavTitle = styled.div`
     text-transform: capitalize;
+    margin-left: .3rem;
     opacity: 0;
     visibility: hidden;
     transition: all .2s;

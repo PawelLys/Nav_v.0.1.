@@ -53,7 +53,7 @@ class HeaderLeft extends React.Component {
                 <s.Burger openBurger={burgerBtn} />
             </s.NavBurger>
             
-            <s.Nav>
+            <s.Nav show={burgerBtn}>
                 {Object.keys(elements).map((title, index) => {
                     return(
                         <React.Fragment key={index}>
